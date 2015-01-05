@@ -1,0 +1,27 @@
+﻿<Window x:Class="NumberConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Number Converter" MinHeight="380" MinWidth="580" Height="380" Width="580">
+    
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Open Binary Converter"/>
+                <MenuItem Header="Open Hexidecimal Converter"/>
+                <MenuItem Header="Open Denary Converter"/>
+                <MenuItem Header="Quit"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About"/>
+            </MenuItem>
+        </Menu>
+        <Viewbox Stretch="Uniform">
+            <StackPanel>
+                <Label x:Name="UITitle" HorizontalContentAlignment="Center" FontFamily="Trebuchet MS" FontSize="64" Content="Number Converter"/>
+                <Button x:Name="ToBinaryButton" HorizontalAlignment="Center" Padding="5" Margin="5" Content="To Binary" FontFamily="Segoe WP SemiLight" FontSize="37" Click="GotoBinaryPage"/>
+                <Button x:Name="ToHexButton" HorizontalAlignment="Center" Padding="5" Margin="5" Content="To Hex" FontFamily="Segoe WP SemiLight" FontSize="37" Click="GotoHexidecimalPage"/>
+                <Button x:Name="ToDenaryButton" HorizontalAlignment="Center" Padding="5" Margin="5" Content="To Denary" FontFamily="Segoe WP SemiLight" FontSize="37" Click="GotoDenaryPage"/>
+            </StackPanel>
+        </Viewbox>
+    </DockPanel>
+</Window>
