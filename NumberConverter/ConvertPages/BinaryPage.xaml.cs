@@ -1,21 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using NumberConverter.Core;
+
 using System.Text.RegularExpressions;
 
-using NumberConverter.Core;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace NumberConverter.ConvertPages
 {
@@ -55,10 +43,10 @@ namespace NumberConverter.ConvertPages
 
             if (currentBox.Name == denaryBox.Name)
             {
-                int denaryBoxInt;
+                long denaryBoxInt;
                 if (Regex.IsMatch(denaryBox.Text, @"^\d+$"))
                 {
-                    if (int.TryParse(denaryBox.Text, out denaryBoxInt))
+                    if (long.TryParse(denaryBox.Text, out denaryBoxInt))
                     {
                         binaryBox.Text = Conversion.fromDenary(denaryBoxInt, 2);
                         BinarySentence.Content = Conversion.binaryToSentence(BinaryInputBox.Text);

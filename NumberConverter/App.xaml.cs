@@ -14,6 +14,11 @@ namespace NumberConverter
     /// </summary>
     public partial class App : Application
     {
+        private void App_UnhandledException(object sendder, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show("An unhandled exception occuered: " + e.Exception.Message, "Number Converter Error Box",MessageBoxButton.OK, MessageBoxImage.Error);
+            Console.WriteLine("Unhandled error detected!");
+        }
     }
 
     public class Switcher

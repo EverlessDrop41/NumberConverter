@@ -8,8 +8,8 @@ namespace NumberConverter.Core
     /// </summary>
     class Conversion
     {
-        public static Dictionary<int, char> numToLet
-            = new Dictionary<int, char> 
+        public static Dictionary<long, char> numToLet
+            = new Dictionary<long, char> 
             { 
                 #region assignment
                 {0, '0'},
@@ -87,14 +87,14 @@ namespace NumberConverter.Core
         /// </summary>
         /// <param name="num">A number in string form that you wish to translate to binary</param>
         /// <param name="numBase">The base of the number you are passing in</param>
-        static public int ToDenary(string num, int Base)
+        static public long ToDenary(string num, int Base)
         {
             num = reverseString(num);
-            int den = 0;
+            long den = 0;
             for (int i = 0; i < num.Length; i++)
             {
-                int x = letToNum[num[i]];
-                den += (x * (int)Math.Pow(Base, i));
+                long x = letToNum[num[i]];
+                den += (x * (long)Math.Pow(Base, i));
             }
             return den;
         }
@@ -105,7 +105,7 @@ namespace NumberConverter.Core
         /// <param name="num">Original Number</param>
         /// <param name="Base">Base to convert to</param>
         /// <returns></returns>
-        static public string fromDenary(int num, int Base)
+        static public string fromDenary(long num, int Base)
         {
             decimal opNum = num;
             string returnNum = "";
@@ -122,7 +122,7 @@ namespace NumberConverter.Core
 
             while (opNum >= Base)
             {
-                int tempNum = (int)opNum % Base;
+                long tempNum = (long)opNum % Base;
                 returnNum += numToLet[tempNum];
                 opNum = Math.Floor(opNum / Base);
             }
@@ -131,6 +131,12 @@ namespace NumberConverter.Core
 
             return returnNum;
         }
+        /*
+        static public string fromDenary(int num, int Base)
+        {
+            long tmpNum = long.Parse(num.ToString());
+            return fromDenary(tmpNum, Base);
+        } */
 
         /// <summary>
         /// Returns a string in a reversed order (HEY -> YEH)
