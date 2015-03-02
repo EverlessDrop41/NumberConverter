@@ -35,17 +35,17 @@ namespace NumberConverter
 
         private void GotoDenaryPage(object sender, RoutedEventArgs e)
         {
-            Switcher.Navigate(new NumberConverter.ConvertPages.TestPage());
+            Switcher.Navigate(new NumberConverter.ConvertPages.BinaryPage());
         } 
   
         private void GotoBinaryPage(object sender, RoutedEventArgs e)
         {
-            Switcher.Navigate(new NumberConverter.ConvertPages.TestPage());
+            Switcher.Navigate(new NumberConverter.ConvertPages.BinaryPage());
         }   
 
         private void GotoHexidecimalPage(object sender, RoutedEventArgs e)
         {
-            Switcher.Navigate(new NumberConverter.ConvertPages.TestPage());
+            Switcher.Navigate(new NumberConverter.ConvertPages.BinaryPage());
         }   
 
     }
