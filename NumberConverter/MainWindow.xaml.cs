@@ -32,7 +32,7 @@ namespace NumberConverter
 
         private void GotoHexidecimalPage(object sender, RoutedEventArgs e)
         {
-            Switcher.Navigate(new NumberConverter.ConvertPages.BinaryPage());
+            Switcher.Navigate(new NumberConverter.ConvertPages.HexadecimalPage());
         }   
 
     }

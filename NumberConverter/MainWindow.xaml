@@ -18,9 +18,9 @@
         <Viewbox Stretch="Uniform">
             <StackPanel>
                 <Label x:Name="UITitle" HorizontalContentAlignment="Center" FontFamily="Trebuchet MS" FontSize="64" Content="Number Converter"/>
-                <Button x:Name="ToBinaryButton" HorizontalAlignment="Center" Padding="5" Margin="5" Content="To Binary" FontFamily="Segoe WP SemiLight" FontSize="37" Click="GotoBinaryPage"/>
-                <Button x:Name="ToHexButton" HorizontalAlignment="Center" Padding="5" Margin="5" Content="To Hex" FontFamily="Segoe WP SemiLight" FontSize="37" Click="GotoHexidecimalPage"/>
-                <Button x:Name="ToDenaryButton" HorizontalAlignment="Center" Padding="5" Margin="5" Content="To Denary" FontFamily="Segoe WP SemiLight" FontSize="37" Click="GotoDenaryPage"/>
+                <Button x:Name="ToBinaryButton" HorizontalAlignment="Center" Padding="5" Margin="5" Content="Binary" FontFamily="Segoe WP SemiLight" FontSize="37" Click="GotoBinaryPage"/>
+                <Button x:Name="ToHexButton" HorizontalAlignment="Center" Padding="5" Margin="5" Content="Hexadecimal" FontFamily="Segoe WP SemiLight" FontSize="37" Click="GotoHexidecimalPage"/>
+                <Button x:Name="ToDenaryButton" HorizontalAlignment="Center" Padding="5" Margin="5" Content="All Bases" FontFamily="Segoe WP SemiLight" FontSize="37" Click="GotoDenaryPage"/>
             </StackPanel>
         </Viewbox>
     </DockPanel>
