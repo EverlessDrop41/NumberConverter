@@ -25,5 +25,32 @@ namespace NumberConverter.Core
 
             return true;
         }
+
+        public static bool IsHexadecimal(string hex)
+        {
+            foreach (char c in hex)
+            {
+                if ( !( (c >= '0' && c <= '9') ||
+                        (c >= 'a' && c <= 'f') ||
+                        (c >= 'A' && c <= 'F') )) //Not a Hex character (Chars can be compared like numbers)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool IsHexColor(string hexVal)
+        {
+            if (IsHexadecimal(hexVal))
+            {
+                int len = hexVal.Length;
+                return (len == 3 || len == 6);
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

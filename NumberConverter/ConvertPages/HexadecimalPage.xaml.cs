@@ -28,9 +28,11 @@ namespace NumberConverter.ConvertPages
         public HexadecimalPage()
         {
             InitializeComponent();
+        }
 
-            HexBox = HexInputBox;
-            colorPicker = ColorInput;
+        private void UpdateAnswerFromTextInput(object sender, KeyEventArgs e)
+        {
+            //ColorInput.SelectedColor = Color.;
         }
     }
 }
